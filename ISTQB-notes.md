@@ -17,39 +17,39 @@
 
 #### Intro
 * Why do we need testing?
- * Making sure it's up to quality standards.
+  * Making sure it's up to quality standards.
 * How might testing contribute to better quality software?
- * Ensure that all requirements have been met.
+  * Ensure that all requirements have been met.
 * What is quality?
 
 #### Exams
 * 40 Questions, 26 to pass
- * Need to get 30 in 2 mocks to do the exam
+  * Need to get 30 in 2 mocks to do the exam
 * K-Levels
- * Indication of how easy the question should be
+  * Indication of how easy the question should be
 * Question distribution
- * Distribution of K-levels in the exam
+  * Distribution of K-levels in the exam
 
 ## Fundamentals of testing
 
 #### Why do we test?
 * Testing and Risk?
- * Minimise Risk.
+  * Minimise Risk.
 * Testing and Quality?
- * Want to give an indication of the software quality
+  * Want to give an indication of the software quality
 * Exhaustive Testing?
- * Testing every option/combination of options.
- * Not really possible, too many options.
+  * Testing every option/combination of options.
+  * Not really possible, too many options.
 
 #### Key Testing Terms
 * **Error** (**Mistake**)
- * Human is responsible
- * Leads to
+  * Human is responsible
+  * Leads to
 * **Defect** (**Fault**, **Bug**)
- * Problem with the code
- * Leads to
+  * Problem with the code
+  * Leads to
 * **Failure**
- * The project not succeeding
+  * The project not succeeding
 
 
 * Effects a defect might have on a project
@@ -67,24 +67,24 @@
 1. Testing shows the presence of bugs
 2. Exhaustive Testing is impossible
 3. Early Testing
- * Start testing as early as Product Requirements
- * Prevent any errors from getting too ingrained
- * Minimise cost to fix
+  * Start testing as early as Product Requirements
+  * Prevent any errors from getting too ingrained
+  * Minimise cost to fix
 4. Defect Clustering
- * Pareto Principle - 80% of defects are within the same 20% of code
- * Pockets of complexity
+  * Pareto Principle - 80% of defects are within the same 20% of code
+  * Pockets of complexity
 5. The pesticide paradox
- * Doing the same test over and over won't catch all the bugs
- * Need to change up testing frequently
+  * Doing the same test over and over won't catch all the bugs
+  * Need to change up testing frequently
 6. Testing is context dependant
- * Need your tests to be appropriate to the product you're testing
+  * Need your tests to be appropriate to the product you're testing
 7. Absence of errors fallacy
- * Just because you can't find errors doesn't mean there aren't any
+  * Just because you can't find errors doesn't mean there aren't any
 
 #### Developer/Tester Mindset
 * The approach of a Tester
- * Need to be empathetic towards developers
- * Need to focus on quality/vision
+  * Need to be empathetic towards developers
+  * Need to focus on quality/vision
 * The approach of a Developer
 * Using these different viewpoints to mitigate risk and increase quality
 
@@ -97,11 +97,11 @@
 ### Fundamental Test Process
 1. Test Planning and Control
 2. Test Analysis and Design
- * Can return to 1.
+  * Can return to 1.
 3. Test Implementation and Execution
- * Can return to 2.
+  * Can return to 2.
 4. Evaluating Exit Criteria and Reporting
- * Can return to 2.
+  * Can return to 2.
 5. Test Closure Activities
 
 #### Test Planning and Control
@@ -110,27 +110,27 @@
 * Who is doing the testing
 * How it will be achieved
 * Will also **determine exit criteria**
- * Exit Criteria - What needs to be achieved before the testers can leave
- * Think about Decision/Statement Coverage (Not that common)
+  * Exit Criteria - What needs to be achieved before the testers can leave
+  * Think about Decision/Statement Coverage (Not that common)
 
 #### Test Analysis and Design
 * The fine detail of what to test
 * Test conditions, cases and procedures
- * Conditions - A characteristic of our software that we can check with a test or set of tests.
- * Cases - The actual tests we're going to be doing - Gets to a start point (Execution Preconditions), Input values to achieve an expected result, leaves the system at an end point (Execution post conditions)
- * Procedures - The methodology for the tests (script)
+  * Conditions - A characteristic of our software that we can check with a test or set of tests.
+  * Cases - The actual tests we're going to be doing - Gets to a start point (Execution Preconditions), Input values to achieve an expected result, leaves the system at an end point (Execution post conditions)
+  * Procedures - The methodology for the tests (script)
 * **The Test Base is reviewed**
- * Body of knowledge used as the basis for test analysis and design
+  * Body of knowledge used as the basis for test analysis and design
 * We look at how to combine test conditions into test cases
 
 #### Test Implementation and Execution
 * Most visible part of testing
 * Prioritising test cases
 * Creating test suites from collected test cases
- * A set of test cases or test procedures to be executed in a specific test cycle
+  * A set of test cases or test procedures to be executed in a specific test cycle
 * Environment set-up
 * Log testing activities and defects
- * Write up results in a log (EG: JIRA)
+  * Write up results in a log (EG: JIRA)
 * Running tests
 
 #### Evaluating Exit Criteria and Reporting
@@ -142,7 +142,7 @@
 #### Test Closure Activities
 * Make sure docs are up to date and archived
 * Passing over testware to maintenance teams if available
- * Enable Support staff to test the software and resolve issues
+  * Enable Support staff to test the software and resolve issues
 * Lessons learnt
 
 ### Development Models
@@ -152,20 +152,20 @@ Methodology chosen depends on the:
 * Resource availability
 
 #### **Waterfall**
- *
+*
 #### ***V-Model***
 * Requirement Spec
- * -> Planning -> Acceptance Testing
- * Capturing of user needs
+  * -> Planning -> Acceptance Testing
+  * Capturing of user needs
 * Functional Spec
- * -> Planning -> System Testing
- * Definitions of functions required to meet user needs
+  * -> Planning -> System Testing
+  * Definitions of functions required to meet user needs
 * Tech Spec
- * -> Planning -> Integration Testing
- * Technical design of functions identified in Functional Spec
+  * -> Planning -> Integration Testing
+  * Technical design of functions identified in Functional Spec
 * Program Spec
- * -> Planning -> Unit Testing
- * Detailed design of each module or unit to be built to meet required functionality
+  * -> Planning -> Unit Testing
+  * Detailed design of each module or unit to be built to meet required functionality
 * Coding
 * Unit Testing
 * Integration Testing
@@ -206,22 +206,22 @@ Generally, most system failures will be in a small proportion of modules.
 ### Integration Testing
 * Units are integrated and tested together
 * There are two types to remember
- * Big Bang Integration
- * Incremental Integration
+  * Big Bang Integration
+  * Incremental Integration
 
 #### Incremental Integration
 ##### Top Down
 * High level modules are created first, so a stub code is needed
- * Stub code = filler code to allow testing before some code is created
+  * Stub code = filler code to allow testing before some code is created
 * Pros
- * Useful for generic software
- * Allow for early demonstrations of product functionality
- * Etc.
+  * Useful for generic software
+  * Allow for early demonstrations of product functionality
+  * Etc.
 ##### Bottom Up
 * In absence of parent modules, drivers are used
 * Pros
- * Higher Accuracy at the granular level
- * Etc.
+  * Higher Accuracy at the granular level
+  * Etc.
 
 ##### Hybrid
 
@@ -270,9 +270,9 @@ Additional aspects to think about at this point are:
 #### Contract and Regulation Acceptance Testing
 * Contractual - Acceptance criteria outlined in a contract
 * Regulations - Some industries have rigid regulations that must be adhered to:
- * Government
- * Legal
- * Safety Reasons
+  * Government
+  * Legal
+  * Safety Reasons
 
 Ignorance is not an excuse
 
@@ -287,20 +287,20 @@ Allows for feedback from potential or existing customers
 ##### Functional, Non-Functional and Structural Testing
 
 * Functional
- * Requirement Specification Based
- * Black-Box - Cannot see the code
- * (Can be done at all levels)
+  * Requirement Specification Based
+  * Black-Box - Cannot see the code
+  * (Can be done at all levels)
 * Non-Functional
- * Performance
- * Usability
- * (Often used to check the readiness of the system)
+  * Performance
+  * Usability
+  * (Often used to check the readiness of the system)
 * Structural
- * Control Flow
- * Menu Structure
- * White-Box - Can see the code
- * (Can be done at all levels)
+  * Control Flow
+  * Menu Structure
+  * White-Box - Can see the code
+  * (Can be done at all levels)
 * Change Related
- * Carried out on a live system
+  * Carried out on a live system
 
 #### Functional (Black Box)
 Testing the functions of the system. Verifying a specific action or function of the underlying code works.
@@ -359,7 +359,7 @@ Difficulties you may encounter:
 ### Dynamic Testing Vs Static Testing
 * Dynamic - Examination by execution of the code
 * Static - Examination without executing the code
- * Involves either reviews of documentation or static code analysis
+  * Involves either reviews of documentation or static code analysis
 
 ### What can be inspected?
 * Code
@@ -370,25 +370,25 @@ Difficulties you may encounter:
 
 ### Reviews and levels of formality
 * Informal
- * *Lowest Formality*
- * No Formal Process
- * Not usually documented
- * Inexpensive way to achieve limited benefits
- * May be implemented as Pair Programming
+  * *Lowest Formality*
+  * No Formal Process
+  * Not usually documented
+  * Inexpensive way to achieve limited benefits
+  * May be implemented as Pair Programming
 * Walkthrough
- * Led by the author of the document (***Kahoot Question***)
- * Can vary widely in practice from formal to informal
- * Main purpose to enable learning
+  * Led by the author of the document (***Kahoot Question***)
+  * Can vary widely in practice from formal to informal
+  * Main purpose to enable learning
 * Technical Review
- * Documented
- * Usually performed as a peer review led by moderator
- * Can also vary widely from informal to formal
+  * Documented
+  * Usually performed as a peer review led by moderator
+  * Can also vary widely from informal to formal
 * Inspection
- * *High Formality*
- * Led by trained moderator
- * Pre-Meeting prep is essential
- * Main purpose to find defects
- * Secondary may be process improvement
+  * *High Formality*
+  * Led by trained moderator
+  * Pre-Meeting prep is essential
+  * Main purpose to find defects
+  * Secondary may be process improvement
 
 ### Benefits of Static Testing
 * Early defect detection and correction
