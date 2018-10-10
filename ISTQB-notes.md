@@ -134,10 +134,10 @@
 * Running tests
 
 #### Evaluating Exit Criteria and Reporting
-* Has the criteria been met to satisfy the stakeholders
-* Does the system do as expected
+* Has the criteria been met to satisfy the stakeholders?
+* Does the system do as expected?
 * Determine if more tests need to be made
-* Is the system ready for release
+* Is the system ready for release?
 
 #### Test Closure Activities
 * Make sure docs are up to date and archived
@@ -152,7 +152,7 @@ Methodology chosen depends on the:
 * Resource availability
 
 #### **Waterfall**
-*
+
 #### ***V-Model***
 * Requirement Spec
   * -> Planning -> Acceptance Testing
@@ -184,8 +184,8 @@ Pros:
 * Integrates testing into the whole dev process
 * At each
 * Can have extra levels of testing, EG: System Integration testing between System and Acceptance
-#### **Agile**
 
+#### **Incremental (Agile)**
 
 ## Test Levels
 #### Objectives
@@ -227,7 +227,7 @@ Generally, most system failures will be in a small proportion of modules.
 
 ### System Testing
 * System testing looks at the behaviour of the system
-* Harnesses complete end to end scenarios in the way that the customer would use the system
+* Harnesses complete *end to end* scenarios in the way that the customer would use the system
 * A test team must endeavour to apply every agreed input and receive the correct output to exercise the full capabilities of the system
 
 Possible tests (including non-functional):
@@ -265,7 +265,9 @@ A Crucial element for making sure the product will be functional in its perceive
 Additional aspects to think about at this point are:
 * Back-Up
 * Disaster Recovery
-* Etc.
+* End User Training
+* Maintenance Procedures
+* Security Procedures
 
 #### Contract and Regulation Acceptance Testing
 * Contractual - Acceptance criteria outlined in a contract
@@ -303,7 +305,7 @@ Allows for feedback from potential or existing customers
   * Carried out on a live system
 
 #### Functional (Black Box)
-Testing the functions of the system. Verifying a specific action or function of the underlying code works.
+Testing the functions of the system. Verifying a specific action or function of the underlying code works. (All levels)
 
 #### Non-Functional
 Testing of the quality characteristics of the component or system
@@ -316,7 +318,7 @@ Testing of the quality characteristics of the component or system
 * Stress Testing
 
 #### Structural (White Box)
-How the code makes the functionality work. What is happening "under the hood"
+How the code makes the functionality work. What is happening "under the hood". (All levels)
 * Decision Coverage
 * Statement Coverage
 
@@ -474,12 +476,25 @@ You must consider the context (environment) within which the tests are taking pl
 Why is traceability from test procedures back to specifications important?
 * It enables both effective impact analysis when requirements change, and determining requirements coverage for a set of tests
 
+
+* Test Design – The process of transforming general testing objectives into tangible test conditions and test cases.
+* Test Base – i.e. Requirements and Specifications
+  * Test Approach – implemented to select the test design techniques to use, i.e.:
+    * Specification Based/Black Box,
+    * Structure Based/Whitebox, Experience/Exploration Based
+* Test Plan - A document describing the scope, approach, resources and schedule of intended test activities
+  * Test Conditions – An item or event of a system that could be verified by one or more test cases
+    * i.e. Signing into a website would be an test condition, but so could being in a state of ‘Overdrawn’ with a bank account.
+* Test Cases – Information to execute the test i.e. environmental needs, expected outputs
+  * Test Implementation - The process of developing and prioritising test procedures, creating test data etc.
+* Test Procedures – A robust resource of test scripts to do the testing
+
 #### Test Design Specification
 * Highest level document we create
 * Specifies the test conditions for a test item, the detailed test approach and identifies the associated high level test cases
-* Template: IEEE829
+* Template: **IEEE829**
 
-#### Test Cases
+### Test Cases
 
 Now that we understand the conditions, we can create the Test Cases
 
@@ -497,3 +512,174 @@ The Objective of compiling the test case specifications is to specify in detail 
 * Input
 * Expected Result
 * Actual Result
+
+#### Ways to tackle Test Cases
+* Functional
+  * Test each function
+* Domain
+  * Test by partitioning different sets of values
+* Specification Based
+  * Test against specifications
+* Risk Based
+  * Imagine a way a program could fail and then design tests to check whether the program will actually fail
+* User
+  * How the user will approach the system
+* Scenario/Use Case
+  * Based on actors/users and a set of actions they are likely to perform in real life
+* Exploratory
+  * The tester actively controls the design of tests as those tests are performed and uses information gained while testing to design new and better tests
+
+#### Expected Results
+* The most important part of executing tests is knowing why you are doing them in the first place
+* If expected results have not been defined, an incorrect result may be interpreted as a correct one
+
+### Test Procedure
+
+
+### Standardisation
+* If a feature has a lot of input combinations, separate the test into subtests
+* Write in keeping with standard documentation
+
+### Traceability
+* ISTQB Definition
+  * Traceability: The ability to identify related items in documentation and software, such as requirements with associated tests
+* Ability to trace test conditions to specs and requirements
+* Allows impact analysis when the requirements change
+* Ensures requirements test coverage can be determined for a set of tests
+* Horizontal Traceability: The tracing of requirements for a test level through the layers of test documentation (eg: test plan, test design spec, test case spec & test procedure spec or test script)
+* Vertical Traceability: The tracing of requirements through the layers of development documentation to components
+
+### Test Plan
+* **IEEE829** Standard
+* Master test plan within the IEEE829 document
+
+#### Basic Template
+1. Test Plan Identifier
+2. References
+3. Introduction
+4. Test Items
+5. Software Risk Issues
+6. Features to be Tested
+7. Features not to be Tested
+8. Approach
+9. Item Pass/Fail Criteria
+10. Suspension Criteria and Resumption Requirements
+11. Test Deliverables
+12. Remaining Test Tasks
+13. Environmental Needs
+14. Staffing and Training Needs
+15. Responsibilities
+16. Schedule
+17. Planning Risks and Contingencies
+18. Approvals
+19. Glossary
+
+### Scheduling
+* Once the procedures are complete the test cases can be formed into a test execution schedule
+* Defines the order the various test procedures are executed
+* Test execution schedule takes into account such factors as regression tests, prioritisation and technical/logical dependencies
+
+
+* Most important tests must be executed earliest so, even if the time is shortened we have still tested the top priority functionality
+* Take into consideration the logical order of execution and technical dependencies
+* Highest priority is always run first (possibly taking the opportunity to test any dependencies or relative areas at the same time)
+* Regression testing must be done last
+
+Test plans must be highly dynamic due to:
+* Changing Priorities
+* Defects
+* Resources
+
+### Test Coverage
+Quantitative measures are extremely important to help stakeholders understand how much of the system has been tested
+
+Need to consider in terms of how much of the system has been tested. EG:
+* 2 Weeks of testing - **Bad**
+* 80% of the system has been tested - **Good**
+
+Coverage might make up part of the completion criteria defined in the test plan. It can also be used to tell us when to stop testing.
+
+## Testing Techniques
+#### Objectives
+* Explain the characteristics and differences between specification-based testing, structure based testing and experience based testing
+* Apply equivalence partitioning, boundary value analysis, decision tables and state transition diagrams/tables
+* Explain the concept of use case testing and its benefits
+* Describe the importance of code coverage
+* Be able to write test case specs
+* Assess statement and decision coverage for completeness with respect to defined exit criteria
+* Recall reasons for writing test cases based on intuition, experience and knowledge about common defects
+* Compare experience based techniques with specification based testing techniques
+* Classify test design techniques according to their fitness to a given context for the test basis respective models and software characteristics
+
+
+### Types of Testing
+* Functional - Specification Based, Black-Box
+* Non-Functional - Performance, Usability
+* Structural - Control Flow, Menu Structure, White-Box
+* Change Related - Carried out on a live system
+
+### Functional Testing
+* Examines the functionality of an application without knowledge of its internal structures
+* It is based entirely on the software requirements and specifications
+
+#### Techniques we will be looking at
+* Sanity/Smoke Check
+* Decision Table Testing
+* State Transition Testing
+* Equivalence Partitioning
+* Boundary Value Analysis
+* Use Case Testing
+
+#### Sanity Check/Smoke Test
+* Smoke Test - Aim is not to find defects, but check for system health
+* Sanity Check - Makes sure the bugs reported in previous builds are fixed for this release before doing a full regression test
+Acceptable in the Integration/System/Acceptance Testing levels
+
+#### Decision Table Testing
+Compact and precise way of modelling complex logic
+
+Lists all conditions that can occur + consequences
+
+Conditions | Sets of Conditions
+-|-
+Actions | Action Entries
+
+* Sets of conditions are Bool values that make up the different possible combinations of conditions
+* Action Entries are check marks, representing which of the actions in a given column are to be performed
+
+##### Infeasibility
+Certain combinations are logically impossible.
+
+Sometimes we want to test an infeasible test condition to make sure it can't happen
+
+#### State Transition Testing
+* When a system is represented as being in one state and transitions from that state to another
+* The transformations are determined by the rules of the system
+* This means we can follow these rules to create a diagram that represents the change of transitions and thus a test to see if it works
+
+Goal: Finding situations where the wrong action or the wrong new state occurs in response to a particular event.
+
+As testers, we report these problems all the time as bugs.
+
+When a system should only be in a finite number of states, we can use transition testing techniques to create our tests
+
+EG: A door transitions between the open and closed state
+
+* States - How something exists at that time
+* Transitions - The change from one state to another.
+  * Triggered by...
+* Inputs/Events - What triggers a state transition
+* Actions - Actions that can result from a transition
+
+##### 0-1-2-3 Switch Summary
+* If every valid transition is tested, this is known as "0-switch" coverage
+* You could also test a series of transitions through more than one state
+* If you covered all of the pairs of two valid transitions, you would have "1-switch" coverage
+* Covering the sets of 3 transitions would give "2-switch" coverage, etc.
+
+
+
+Structural/White-Box | Specification/Black Box | Experience Based
+---------------------|-------------------------|-----------------
+ |  |
+ |  |
